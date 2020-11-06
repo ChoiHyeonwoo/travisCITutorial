@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # travisCITutorial
 =======
 # Getting Started with Create React App
@@ -71,4 +70,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 66efc783f30e560df74c86059fbb8c92149f11f2
