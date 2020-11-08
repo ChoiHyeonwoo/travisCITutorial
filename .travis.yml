@@ -18,3 +18,24 @@ script:
 #테스트 성공 후 할일
 after_success:
     - echo "test success"
+
+#AWS 연동을 위한 부분
+deploy:
+    # 실제 aws 배보 되는 서비스
+    provider: elasticbeanstalk
+    # 리전
+    region: "ap-northeast-2"
+    # 어플리케이션 이름
+    app: "docker-react-app"
+    # EB 환경 이름
+    env: "DockerReactApp-env"
+    # EB와 연동된 S3의 이름
+    bucket_name: "elasticbeanstalk-ap-northeast-2-844556818888"
+    # EB와 연동된 S3의 path
+    bucket_path: "docker-react-app"
+    # trigger Action이 올라올 github branch
+    on:
+        branch: main
+#AWS access key & Secret key (travis-ci web dashboard - settings 에 설정)
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: $AWS_SECRET_ACCESS_KEY
