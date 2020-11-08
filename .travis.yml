@@ -1,0 +1,20 @@
+#관리자 권한 갖기
+sudo: required
+# 언어 (플랫폼)
+language: generic
+
+# 도커환경 구성.
+service:
+    -docker
+#실행 전 설치
+before_install:
+    - echo "start creating an image with dockerfile"
+    - docker build -t hwchoi/docker-react-app -f Dockerfile.dev .
+
+#실행할 스크립트 (테스트)
+script:
+    - docker run -e CI=true hwchoi/docker-react-app npm run test -- --coverage
+
+#테스트 성공 후 할일
+after_success:
+    - echo "test success"
