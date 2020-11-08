@@ -36,6 +36,6 @@ deploy:
     # trigger Action이 올라올 github branch
     on:
         branch: main
-#AWS access key & Secret key (travis-ci web dashboard - settings 에 설정)
-access_key_id: $AWS_ACCESS_KEY
-secret_access_key: $AWS_SECRET_ACCESS_KEY
+    #AWS access key & Secret key (travis-ci web dashboard - settings 에 설정)
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
