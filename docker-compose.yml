@@ -3,9 +3,9 @@ services:
     react:
         build:
             context: .
-            dockerfile: Dockerfile.dev
+            dockerfile: Dockerfile
         ports:
-            - "3000:3000"
+            - "3000:80"     #nginx 포트 매핑
         volumes: 
             - /usr/src/app/node_modules #해당 경로는 매핑하지 않음
             - ./:/usr/src/app #해당 경로의 파일을 참조하겠다.
